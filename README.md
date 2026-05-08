@@ -160,7 +160,7 @@ AI Berkshire 确保：**同样的输入 → 结构一致、深度一致的输出
 > 图源：[`assets/architecture.mmd`](assets/architecture.mmd)（Mermaid 可编辑源码）
 
 **三层设计哲学**：
-- **Skill 层**：把"你要做什么"抽象成 6 个明确入口——深度研究、快速筛选、行业扫描、未上市公司、异动归因，按场景选用
+- **Skill 层**：把"你要做什么"抽象成 7 个明确入口——深度研究、快速筛选、行业扫描、漏斗筛选、未上市公司、异动归因，按场景选用
 - **Agent 层**：每个 skill 内部都是 4 个 Agent 并行——它们各自独立搜索、独立判断、互相挑战，最后由 Team Lead 综合
 - **工具层**：精确计算、实时检索、报告抽检——保证每份报告的数据严谨性可验证
 
@@ -174,6 +174,7 @@ AI Berkshire 确保：**同样的输入 → 结构一致、深度一致的输出
 | [`/investment-team`](skills/investment-team.md) | 多Agent并行投研团队 | 需要更快速、多角度同时分析 |
 | [`/investment-checklist`](skills/investment-checklist.md) | 巴菲特买入前 Checklist | 快速筛选，决定是否值得深入研究 |
 | [`/industry-research`](skills/industry-research.md) | 产业链全景扫描 | 研究一个行业/主题的全部投资机会 |
+| [`/industry-funnel`](skills/industry-funnel.md) | 行业漏斗筛选 | 全市场 → 粗筛 ≤10 家 → 终选 3 家深度分析 |
 | [`/private-company-research`](skills/private-company-research.md) | 未上市公司深度研究 | 研究蚂蚁、SpaceX等未上市公司 |
 | [`/news-pulse`](skills/news-pulse.md) | 股价异动新闻归因 | 股价大涨/大跌时10分钟搞清"发生了什么" |
 
@@ -207,6 +208,7 @@ cp ai-berkshire/skills/*.md ~/.claude/commands/
 /investment-research 腾讯
 /investment-checklist 茅台, 英伟达, 苹果
 /industry-research 核电
+/industry-funnel AI算力
 /investment-team 美团
 /private-company-research SpaceX
 ```
@@ -351,7 +353,48 @@ cp ai-berkshire/skills/*.md ~/.claude/commands/
 
 ---
 
-### 5. `/private-company-research` — 未上市公司深度研究
+### 5. `/industry-funnel` — 行业漏斗筛选
+
+从一个行业/方向出发，**全市场 → ≤10 家 → 3 家**逐层精选：
+
+```
+全市场扫描（活跃度 + 涨幅 + 市值前 30 并集，30-60 家）
+    ↓ 价值投资 5 条硬指标
+粗筛 ≤ 10 家
+    ↓ 精细分析（每家 300-500 字）
+精细分析 ≤ 10 家
+    ↓ 终选（按组合互补性，不按打分前 3）
+四大师深度分析 3 家（每家 800-1200 字）
+    ↓
+推荐组合（核心 / 卫星 / 期权）+ 操作信号
+```
+
+**核心特色**：
+- 每层都有明确留/弃标准，被淘汰的标的留下淘汰理由（不是黑箱）
+- 终选 3 家按"组合互补性"选（高确定性 + 中等弹性 + 高弹性），不按打分前 3 排序
+- 强制列"未来 IPO 候选"，避免漏掉一级市场核心玩家
+- AI 偏见自觉机制：应对龙头偏好 / 英文偏好 / 故事偏好 / 上市偏好
+
+**与 `/industry-research` 的区别**：
+- `industry-research` 偏重产业链结构与全景（按环节切片）
+- `industry-funnel` 偏重个股筛选漏斗（从全市场逐层精选到 3 家）
+
+**实测：AI 行业 4 子赛道并行（2026-05-09）**：
+
+| 子赛道 | 终选 3 家 | 核心仓位推荐 |
+|-------|---------|------------|
+| AI 算力 | TSMC / NVIDIA / SK Hynix | TSMC ★★★★★ |
+| AI 模型 | Alphabet / Meta / 阿里巴巴 | Alphabet ★★★★★ |
+| AI 应用 | 微软 / Adobe / AppLovin | 微软 + Adobe ★★★★ |
+| AI 基建电力 | Eaton / 特变电工 / Talen Energy | Eaton + 特变电工 ★★★★ |
+
+**关键发现**：AI 应用层最大赢家不是 AI Native 公司，而是有渠道+数据+工作流嵌入度的成熟巨头——这呼应了 1995-2000 互联网泡沫"卖铲子"的历史规律（亚马逊和苹果赢，Pets.com 输）。
+
+完整报告：[AI 算力](reports/AI算力-funnel-20260509.md) · [AI 模型](reports/AI模型-funnel-20260509.md) · [AI 应用](reports/AI应用-funnel-20260509.md) · [AI 基建电力](reports/AI基建电力-funnel-20260509.md)
+
+---
+
+### 6. `/private-company-research` — 未上市公司深度研究
 
 专为信息稀缺的未上市公司设计的"侦探式"研究框架：
 
@@ -385,7 +428,7 @@ cp ai-berkshire/skills/*.md ~/.claude/commands/
 
 ---
 
-### 6. `/news-pulse` — 股价异动新闻归因
+### 7. `/news-pulse` — 股价异动新闻归因
 
 专为"股价大涨/大跌时快速搞清发生了什么"设计的情报响应 Skill。**不是深度投研，是 10-15 分钟的快速归因**——避免持仓异动时陷入小作文焦虑或盲目止损。
 
