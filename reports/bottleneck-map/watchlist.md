@@ -1,27 +1,30 @@
 # 瓶颈猎手观察名单（持续更新）
 
-最后更新：2026-05-25（午后扫描）  
-下次复查：2026-05-26 早间扫描
+最后更新：2026-05-26（早间扫描）  
+下次复查：2026-05-26 午后扫描
 
 ---
 
 ## 重点关注（信号强度★★★★+）
 
-### 1. Aixtron (AIXA，法兰克福交易所) ★★★★ 【2026-05-25新增】
+### 1. Aixtron (AIXA，法兰克福交易所) ★★★ ⚠️短期执行风险 【2026-05-26降级：★★★★→★★★】
 **瓶颈环节**：InP MOCVD外延设备（A级）  
 **市值**：约€2-3B（估计，基于€560M收入指引，待精确核实）  
 **瓶颈核心逻辑**：全球InP/光子MOCVD设备70-90%市场份额；设备材料专用不可替代；交期12-24个月。任何InP晶圆扩产都必须先排队等Aixtron。这是整条InP供应链扩产速度的物理上限。  
 **信号验证**：
-- ✅ Lumentum 2026-05-19下单多台G10-AsP系统
-- ✅ Q1 2026订单积压€359M（+17% YoY）；订单量€171M（+30%）
-- ✅ 2026年全年指引上调至€560M（EBIT 17-20%）
-- ✅ Veeco $2.5亿InP订单确认行业需求真实（行业交叉验证）
+- ✅ Lumentum 2026-05-19下单多台G10-AsP系统（行业需求真实）
+- ✅ Q1 2026订单量€171M（+30% YoY），光子学订单占约70%
+- ✅ 积压€359M（+17% YoY）
+- ✅ 4月14日全年指引上调至€560M（EBIT 17-20%）
+- ✅ Veeco $2.5亿InP订单独立验证行业需求（交叉验证）
+- ❌ **Q1 2026营收€59.4M，同比-47%**（GaN/SiC功率器件极度低迷）
+- ❌ **Q1 毛利率18%（历史正常40-43%）；EBIT亏损€22M**
+- ❌ **有"guidance cut"报道**（与4月14日上调指引冲突，需确认最新全年指引数字）
 - ⚠️ CPO规模化长期存在替代路线风险
-- ⚠️ Aixtron历史上LED周期下行时业绩大幅波动，需确认光子学订单占比
-**估值状态**：合理（待精确核实，估计P/S约4-5x）  
-**待验证**：精确市值和P/E；光子学订单vs LED订单比例；非InP客户比重  
-**状态**：🔴 重点关注，优先深入研究  
-**来源**：[Aixtron Q1 2026](https://finance.yahoo.com/markets/stocks/articles/aixtron-q1-earnings-call-highlights-160408260.html) | [Lumentum订单](https://www.semiconductor-today.com/news_items/2026/may/aixtron-200526.shtml) | [Kerrisdale市场份额分析](https://www.kerrisdalecap.com/wp-content/uploads/2025/11/AIXA-Kerrisdale.pdf)
+**估值状态**：待精确核实（P/S估计4-5x，若指引维持€560M则合理）  
+**降级理由**：Q1财务表现极差（营收-47%，毛利率18%，EBIT亏损）且指引状态不明；虽然订单书强健，但短期财务兑现存疑。降至★★★，等Q1电话会文本/最新指引数字确认后重新评估。
+**行动**：不加仓；午后优先确认最终全年指引数字  
+**来源**：[Aixtron Q1 营收-47%](https://www.semiconductor-today.com/news_items/2026/may/aixtron-040526.shtml) | [指引下调报道](https://www.ad-hoc-news.de/boerse/news/ueberblick/aixtron-se-stock-de000a0wmpj6-guidance-cut-and-new-graphene-order-keep/69367556) | [Yahoo Finance Q1要点](https://finance.yahoo.com/markets/stocks/articles/aixtron-q1-earnings-call-highlights-160408260.html) | [Lumentum订单5月19日](https://www.semiconductor-today.com/news_items/2026/may/aixtron-200526.shtml)
 
 ---
 
@@ -89,12 +92,21 @@
 
 ---
 
-### 6. Veeco Instruments (VECO，纳斯达克) ★★★
-**市值**：约$1.1B（小市值）  
+### 6. Veeco Instruments (VECO，纳斯达克) ★★★★ 【2026-05-26升级：★★★→★★★★】
+**市值**：约$3.8B（股价~$62，2026-05-05盘后）  
 **瓶颈环节**：MOCVD外延设备（A级，#2供应商）  
-**简评**：2026-05-05宣布$2.5亿+InP设备订单，是Aixtron的主要竞争者（20-30%份额）。估值较Aixtron更便宜（P/S约0.7x，估计）。风险：Aixtron主导地位意味着Veeco只吃剩余市场；需确认InP订单占总收入比例。  
-**加入日期**：2026-05-25  
-**来源**：[Veeco $2.5亿InP订单](https://www.globenewswire.com/news-release/2026/05/05/3288217/0/en/Veeco-Announces-250-Million-in-Equipment-Orders-for-Manufacturing-Indium-Phosphide-Lasers.html)
+**最新数据（Q1 2026，2026-05-05披露）**：
+- Q1营收$158.3M（同比-5%，小幅逊预期）
+- Non-GAAP EPS $0.14（逊预期$0.19）
+- **宣布$250M+ InP MOCVD设备订单**（核心信号）
+- 先进封装业务**+100% YoY**
+- FY2026指引：$740-800M（中值$770M）
+- 股价盘后**+21.76%至$62.01**
+**估值**：市值~$3.8B / FY指引$770M → P/S约4.9x（合理，高于此前1.1B估计，需更新）
+**升级理由**：$250M+ InP设备订单（相当于年营收约1/3）是独立的强烈需求验证信号，与Aixtron收到Lumentum订单形成双重交叉验证。先进封装翻倍说明业务多元化支撑更稳健。盘后+22%说明市场认可InP逻辑。  
+**风险**：EPS逊预期、Q1营收同比下滑；InP订单能否在Q3-Q4快速转化为营收需验证；FY指引是否保守  
+**行动**：升至★★★★，候选深入研究；确认P/S合理性后评估是否执行/investment-team  
+**来源**：[Veeco Q1 GlobeNewswire](https://www.globenewswire.com/news-release/2026/05/05/3288214/0/en/Veeco-Reports-First-Quarter-2026-Financial-Results/default.aspx) | [StockTitan](https://www.stocktitan.net/news/VECO/veeco-reports-first-quarter-2026-financial-x9xfz8ljp2dp.html) | [Motley Fool Q1电话会](https://www.fool.com/earnings/call-transcripts/2026/05/05/veeco-veco-q1-2026-earnings-call-transcript/)
 
 ---
 
@@ -154,3 +166,5 @@
 | 2026-05-25（午） | 688676.SH | **新增持续跟踪** | 金盘科技：AIDC收入+337%，AWS/微软客户，市值$20亿合适 |
 | 2026-05-25（午） | POWL | **移至已排除** | $400M大单已price-in，不够便宜 |
 | 2026-05-25（午） | 000533.SZ | **移至已排除** | 股东司法拍卖风险 |
+| 2026-05-26（早） | AIXA | **降级★★★★→★★★** | Q1营收-47%、毛利率18%、EBIT亏损；guidance cut报道存在；短期执行风险升高 |
+| 2026-05-26（早） | VECO | **升级★★★→★★★★** | $250M+ InP MOCVD订单强验证；先进封装+100% YoY；股价盘后+22%；FY指引$740-800M |
