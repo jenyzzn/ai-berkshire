@@ -5707,3 +5707,24 @@ Kanto Denka Kogyo 7/1永久停止WF6生产，**投资论点核心为NF3，而非
 | BaTiO3（Sakai/Nippon Chemical）| BaTiO3非单点瓶颈（17家制造商），Sakai利润-45% YoY，方向与瓶颈受益相反 | 2026-06-17 |
 
 *来源：Investing.com(CHG.L 554p 2026-06-18)；Al Jazeera(Hormuz 6/17电签)；Tower/IQE协议(StockTitan 2026-06-15)；ABF涨价(AtlasPCB/BigGo 2026-05/06)；TrendForce(CoWoS 6/15)；Chemanalyst(溴价$6.16/kg 3月2026)*
+
+## 状态快照（2026-06-18 13:00 — 第227轮）
+
+> 主要变更：① **ICL黎巴嫩条款确认**——Iran-US MOU第1条含"所有战线包括黎巴嫩"，协议6/17已双签，48h未破裂，溴价$3,476/MT未触发$2,800红线，监察窗口重置；② **Foosung估值修正**——PE 241.6x（非TTM亏损），PS 4.03x，+196% YTD，WF6合同涨价+70-90%正式确认；③ WF6升为S级瓶颈。无新标的通过估值门槛。
+
+| 标的 | 代码 | 评级 | 变化 | 关键状态 |
+|------|------|------|------|---------|
+| **Centrus Energy** | LEU | ★★★★★ | 无变化 | 6/30 Option 1b（T-12天）二元事件；AGM 6/18完成（非催化剂） |
+| **ICL Group** | ICL | ★★★★ | ⚠️ 监察窗口重置 | MOU 6/17已含黎巴嫩条款；溴$3,476未破$2,800；72h至6/20；若稳固→切换"防御型"论点 |
+| **Nittobo** | 3110.T | ★★★★ | 无变化 | 5:1拆股6/29记录日/7/1有效日；¥19,460>目标区间，不追高 |
+| **Yageo** | 2327.TW | ★★★★ | 无变化 | Q2财报7月 |
+| **IQE** | IQE.L | ★★★★ | 无变化 | Tower多年协议已签；等8月H1财报 |
+| **Chemring** | CHG.L | ★★★★ | 无变化 | 554p；等H2结果 |
+| **GMT** | 8081.TW | ★★★ | 无变化 | PMIC A级；PE 12x/PS 2.6x绿灯；等Q2财报（7-8月） |
+| **Foosung** | 093370.KS | ★★★ | ⚠️ 估值修正 | PE 241.6x（非亏损）/PS 4.03x/$1.34B市值/+196% YTD；WF6合同+70-90%；等Q2财报升级 |
+| **uPI Semiconductor** | 6719.TW | ★★★（初始） | 无变化 | 估值待核查 |
+| **Iljin Electric** | 103590.KS | ★★★ | 无变化 | 等Q2财报 |
+| **ALM Almonty** | ALM | ★★ | 无变化 | Russell 1000纳入6/29；市值$5.19B估值红灯仍触发 |
+| **AXT Inc** | AXTI | ★★ | 无变化 | 4,000片InP小批出口；等Q2财报 |
+
+*来源：Al Jazeera/CNN 2026-06-17（MOU含黎巴嫩条款）；Morningstar/Yahoo Finance（Foosung PE 241.6x/PS 4.03x）；TrendForce 2026-06-12（WF6合同+70-90%）*
