@@ -231,6 +231,28 @@ git clone https://github.com/xbtlin/ai-berkshire.git
 cp ai-berkshire/skills/*.md ~/.claude/commands/
 ```
 
+#### 一键安装到 Cursor / Codex / Claude Code
+
+也可以用仓库自带的 `install.sh` 一次性安装到多个工具（自动把工具脚本的相对路径改写为绝对路径）：
+
+```bash
+cd ai-berkshire
+
+./install.sh                 # 安装到全部受支持工具
+./install.sh cursor codex    # 只安装指定工具（可多选：cursor / codex / claude）
+./install.sh --uninstall     # 卸载本仓库安装的内容
+```
+
+不同工具的扩展机制不同，脚本会自动适配：
+
+| 工具 | 安装位置 | 调用方式 |
+|------|---------|---------|
+| Cursor | `~/.cursor/commands/<name>.md` | 输入 `/` 选择命令 |
+| Claude Code | `~/.claude/commands/<name>.md` | 输入 `/` 选择命令 |
+| Codex（新版） | `~/.codex/skills/<name>/SKILL.md` | 作为技能按需触发 |
+
+> 注意：新版 Codex（带 threads/skills 的版本）只识别 `~/.codex/skills/`，不再从 `~/.codex/prompts/` 加载斜杠命令，因此脚本会把 Codex 目标安装为 skill。安装后若未生效，请重启 Codex 以重新加载技能。
+
 ### 3. 使用
 
 在 Claude Code 中直接调用：
