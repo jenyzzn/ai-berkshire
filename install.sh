@@ -32,9 +32,14 @@ CODEX_PROMPTS_DIR="$HOME/.codex/prompts"
 # 安装清单：记录所安装的条目以便卸载（F:文件 / D:目录）
 MANIFEST="$REPO_DIR/.install-manifest"
 
-# 把 tools/xxx.py 改写为绝对路径后输出到 stdout
+# 把工具脚本路径改写为本仓库绝对路径后输出到 stdout。
+# 源文件里存在两种写法：`~/ai-berkshire/tools/x.py` 和裸 `tools/x.py`，
+# 需分别处理且避免对已是绝对路径的 `/.../tools/x.py` 重复拼接。
 rewrite_paths() {
-  sed "s#tools/\([A-Za-z0-9_]*\.py\)#${REPO_DIR}/tools/\1#g" "$1"
+  sed -E \
+    -e "s#~/ai-berkshire/#${REPO_DIR}/#g" \
+    -e "s#([^/])tools/([A-Za-z0-9_]+\.py)#\1${REPO_DIR}/tools/\2#g" \
+    "$1"
 }
 
 # 各技能的描述（用于 Codex skill 的 frontmatter，决定何时触发）
